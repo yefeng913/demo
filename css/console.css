@@ -1,0 +1,48 @@
+.header{
+	background: #396;
+	border-bottom: thin solid #FFF;
+}
+
+.menu{
+	margin:10px;
+}
+
+.main{
+	margin:8px 0;
+}
+
+.left{
+	border-radius: 5px;
+	border-right:thin solid #FFF;
+	background:#dbdbdb;
+}
+
+.right{
+	border-radius: 5px;
+	background: #dbdbdb;
+}
+
+.footer{
+	border-top: thin solid #fff;
+	color:#FFF;
+	background: #396;
+}
+
+.footer p{
+	padding-top:10px;
+}
+
+
+/****************************************** reset bootstrap css **********************************/
+
+.breadcrumb{
+	border-radius: 0;
+	padding:15px;
+	border-bottom: thin solid #FFF;
+	background:#DBDBDB;
+}
+
+.table{
+	padding:10px 20px;
+	border:thin solid #FFF;
+}

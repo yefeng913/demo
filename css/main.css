@@ -1,0 +1,117 @@
+body{
+	background: #dbdbdb !important;
+}
+
+/****************************************************选项卡*******************************************/
+.main{
+	height:250px;
+	position: absolute;
+	width:1000px;
+	overflow-x: hidden;
+	border-radius: 5px;
+	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
+}
+.margin-top{
+	margin-top: 100px;
+}
+.pannel-block{ 
+	height: 100%;
+	width:400px;
+	position:absolute;
+	top:0; 
+	cursor: pointer;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	box-shadow: -1px 1px 3px rgba(000,000,000,.9);
+}
+.pannel-one{
+	background: green;
+	left:0;
+}
+
+.pannel-two{
+	background: darkred;
+	left:200px;
+}
+
+.pannel-three{
+	background: blanchedalmond;
+	left:400px;
+}
+ 
+.pannel-four{
+	background: blue;
+	left:600px;
+}
+ 
+.pannel-five{
+	background:goldenrod;
+	left:800px;
+}
+
+.pannel-one:hover + .pannel-two{
+	left:380px;
+	transition-duration:1s;
+	transition-timing-funtion:ease;
+	 
+}
+
+.pannel-two:hover + .pannel-three{
+	left:580px;
+	transition-duration:1s;
+	transition-timing-funtion:ease-in;
+}
+
+.pannel-three:hover + .pannel-four{
+	left:780px;
+	transition-duration:1s;
+	transition-timing-funtion:ease-in-out;
+}
+
+.pannel-four:hover + .pannel-five{
+	left:980px;
+	transition-duration:1s;
+	transition-timing-funtion:linear;
+}
+
+.pannel-five:hover{
+	left:620px;
+	transition-duration:1s;
+	transition-timing-funtion:cubic-bezier;
+}
+
+
+/****************************************************旋转*******************************************/
+.pannel-img{
+	width:220px;
+	height:220px;
+	border-radius: 100%;
+	box-shadow: 1px 1px 4px #000;
+	margin:20px auto;
+	border:thin solid #FFF;
+	background-image: url(../img/nvsheng.jpg);
+	background-repeat: no-repeat;
+	background-size: contain; 
+	cursor: pointer;
+}
+
+.rotate1:hover{
+	transform:rotate(360deg); 
+	transition-duration:1s;
+	transition-timing-funtion:ease;
+}
+.rotate2:hover{
+	transform:rotateX(360deg); 
+	transition-duration:1s;
+	transition-timing-funtion:ease;
+}
+.rotate3:hover{
+	transform:rotateY(360deg); 
+	transition-duration:1s;
+	transition-timing-funtion:ease;
+}
+.rotate4:hover{
+	transform:rotateZ(360deg); 
+	transition-duration:1s;
+	transition-timing-funtion:ease;
+}

@@ -1,0 +1,417 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+    <title>新环境房屋网</title>
+    <link href="http://cdn.bootcss.com/Swiper/3.0.7/css/swiper.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/animate.css/3.3.0/animate.min.css" rel="stylesheet">
+    <style type="text/css">
+   	 	html, body {
+	        position: relative;
+	        height: 100%;
+	    }
+	    body {
+	        font-family: "Microsoft YaHei";
+	        font-size: 14px;
+	        color:#000;
+	        margin: 0;
+	        padding: 0;
+	    }
+	    .swiper-container {
+	        width: 100%;
+	        height: 100%;
+	    }
+	    .logo{
+	    	position: absolute;
+	    	width:100%;
+	    	text-align:center;
+	    	bottom:78%;
+	    }
+	    .zhaofang{
+	    	bottom:68%;
+	    }
+	    .index-theme{
+	    	position: absolute;
+	    	width:100%;
+	    	text-align:center;
+	    	font-size:18px;
+	    	bottom:25%;
+	    	visibility:hidden;
+	    }
+	    .page1 img{
+	    	 width:18%;
+	    	 padding:10px 0;
+	    }
+	    .page1 div:first-child{
+	    	padding-left:5%;
+	    	text-align:left;
+	    }
+	    .page1 div:last-child{
+	    	text-align:right;
+	    	padding-right:5%;
+	    }
+	    .text-left{
+	    	margin:0 5%;
+	    	text-align:left !important;
+	    }
+	    .music{
+	    	position: fixed;
+	    	right:2%;
+	    	top:2%;
+	    	cursor: pointer;
+	    	z-index:9999;
+	    	width:40px;
+	    	height:40px;
+	    }
+	    .rotate-music{
+	    	animation:2.5s linear 0s normal none infinite rotate;
+	    	-webkit-animation:2.5s linear 0s normal none infinite rotate;
+	    }
+	    .off{
+	    	-webkit-filter: grayscale(100%);
+		    -moz-filter: grayscale(100%);
+		    -ms-filter: grayscale(100%);
+		    -o-filter: grayscale(100%);
+		    filter: grayscale(100%);
+		    filter: gray;
+	    }
+	    .down{
+	    	animation: 1.5s ease-in-out 0s normal none infinite start;
+	    	-webkit-animation: 1.5s ease-in-out 0s normal none infinite start;
+	    	position:fixed;
+	    	bottom:0;
+	    	left:46%;
+	    	width:32px;
+	    	height:45px;
+	    	z-index:99;
+	    }
+	    .down img{
+	    	width:35px;
+	    }
+	    @-webkit-keyframes rotate{
+			from{-webkit-transform:rotate(0deg)}
+			to{-webkit-transform:rotate(360deg)}
+		}
+		@-moz-keyframes rotate{
+			from{-moz-transform:rotate(0deg)}
+			to{-moz-transform:rotate(360deg)}
+		}
+	    @-moz-keyframes start {
+			0%, 30% {
+			    opacity: 0;
+			    transform: translate(0px, 10px);
+			}
+			60% {
+			    opacity: 1;
+			    transform: translate(0px, 0px);
+			}
+			100% {
+			    opacity: 0;
+			    transform: translate(0px, -8px);
+			}
+		}
+		@-webkit-keyframes start {
+			0%, 30% {
+			    opacity: 0;
+			    transform: translate(0px, 10px);
+			}
+			60% {
+			    opacity: 1;
+			    transform: translate(0px, 0px);
+			}
+			100% {
+			    opacity: 0;
+			    transform: translate(0px, -8px);
+			}
+		}
+		
+		.bg{
+			background-repeat: no-repeat;
+			background-size:cover;
+			background-position: center;
+		}
+		.bg1{
+			background-image: url('images/bg1.jpg');
+		}
+		.bg2{
+			background-image: url('images/bg2.jpg');
+		}
+		.bg3{
+			background-image: url('images/bg3.jpg');
+		}
+		.bg4{
+			background-image: url('images/bg4.jpg');
+		}
+		.bg5{
+			background-image: url('images/bg5.jpg');
+		}
+		.bg6{
+			background-image: url('images/bg6.jpg');
+		}
+		.bg7{
+			background-image: url('images/bg7.jpg');
+		}
+		.bg8{
+			background-image: url('images/bg8.jpg');
+		}
+		.bg9{
+			background-image: url('images/bg9.jpg');
+		}
+		.page2{
+			color:#fff;
+			font-size:16px;
+		}
+		.page2 span{
+			color:rgb(0,255,37);
+		}
+		.page2 p{
+			margin:10px 0;
+		}
+		.font-14{
+			font-size:14px;
+		}
+		.font-22{
+			font-size:22px;
+		}
+		.font-40{
+			font-size:40px;
+		}
+		.query{
+			width:100%;
+			position: absolute;
+			bottom:25%;
+			text-align:center;
+		}
+		.query input{
+			height:40px;
+			margin:10px;
+			width:70%;
+			border-radius:3px;
+			border:none;
+			box-shadow:3px 5px 10px rgba(0, 0, 0, 0.8);
+		}
+		.btn{
+			color:#FFF;
+			font-weight:bold;
+			background-color:rgb(35,183,61);
+			border:thin solid rgb(35,183,61);
+		}
+		.qrcode{
+			width:100%;
+			position: absolute;
+			bottom:20%;
+			display: table;
+			color:#FFF;
+		}
+		.qrcode div{
+			display:table-row;
+		}
+		.qrcode div div{
+			display:table-cell;
+			width:50%;
+			text-align: center;
+		}
+    </style>
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]--> 
+</head>
+<body>
+<div class="down">
+  <img src="images/up.png">
+</div>
+<div>
+	<img id="key_music" class="music rotate-music" src="images/music.png"/>
+	<audio id="key_audio" src="music/music.mp3" loop="loop" style="display:none;" autoplay="autoplay"></audio>
+</div>
+
+<div id="key_page" class="swiper-container">
+
+     <div class="swiper-wrapper">
+         <div class="swiper-slide bg bg1">
+         	<div class="logo">
+         		<img style="width:60%" src="images/tb-logo.png"/>
+         	</div>
+         	<div class="page1 index-theme wow rollIn" data-wow-delay="0.2s" data-wow-duration="0.4s">
+         		<div>
+	        		<img class="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.5s" src="images/z1.png">
+	        		<img class="wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.5s" src="images/z2.png">
+	        		<img class="wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.5s" src="images/z3.png">
+	        		<img class="wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.5s" src="images/z4.png">
+         		</div>
+        		<div>
+	        		<img class="wow fadeInUp" data-wow-delay="1.0s" data-wow-duration="0.5s" src="images/z5.png">
+	        		<img class="wow fadeInUp" data-wow-delay="1.2s" data-wow-duration="0.5s" src="images/z6.png">
+	        		<img class="wow fadeInUp" data-wow-delay="1.4s" data-wow-duration="0.5s" src="images/z7.png">
+	        		<img class="wow fadeInUp" data-wow-delay="1.6s" data-wow-duration="0.5s" src="images/z8.png">
+        		</div>
+         	</div>
+         </div>
+         <div class="swiper-slide bg bg2">
+         	<div class="page2 ani index-theme" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.2s" swiper-animate-duration="0.4s">
+         		<p>相恋<span class="font-40">十年</span></p>
+         		<p>我们决定换一套新房</p>
+         		<p><span class="font-22">新环境</span>的<span>经纪人</span>待我们走遍周边的楼盘</p>
+         		<p>&nbsp;</p>
+         		<p>看过新房越来越多</p>
+         		<p>和经纪人的聊天记录越来越差</p>
+         		<p>终于定下来的那一刻</p>
+         		<p>我知道这是我们在这个城市新的<span class="font-22">避风港</span></p>
+         	</div>
+         </div>
+         <div class="swiper-slide bg bg3">
+       	 	<div class="page2 ani index-theme" swiper-animate-effect="rotateIn" swiper-animate-delay="0.2s" swiper-animate-duration="0.4s">
+         		<p>毕业<span class="font-40">五年</span></p>
+         		<p>有了属于自己的第一套房</p>
+         		<p><span class="font-22">新环境</span>的<span>经纪人</span>把钥匙交给我的那一刹</p>
+         		<p>我觉得那是沉甸甸的重量</p>
+         		<p>在这座城市&nbsp;我不在只有<span class="font-22">背影</span></p>
+         		<p>只是每次这样目送离开的父母</p>
+         		<p>还是忍不住眼眶泛酸</p>
+         	</div>
+         </div>
+       	 <div class="swiper-slide bg bg4">
+         	 <div class="page2 ani index-theme" swiper-animate-effect="zoomIn" swiper-animate-delay="0.2s" swiper-animate-duration="0.4s">
+         		<p><span class="font-40">37</span><i class="font-22">岁</i></p>
+         		<p class="font-22">我搬进了一个人的新家</p>
+         		<p>&nbsp;</p>
+         		<p class="font-14">37岁的单身公寓买家是不是很少</p>
+         		<p class="font-14">我不想说过去的10年是个错误</p>
+         		<p class="font-14">整理好过去</p>
+         		<p class="font-14">才有能力憧憬未来</p>
+         		<p class="font-14">这间公寓小的<span class="font-22">好温馨</span></p>
+         	</div>
+         </div>
+         <div class="swiper-slide bg bg5">
+         	 <div class="page2 ani index-theme" swiper-animate-effect="pulse" swiper-animate-delay="0.2s" swiper-animate-duration="0.4s">
+         		<p class="font-22">在新环境做了</p>
+         		<p><span class="font-40">四年</span>经纪人</p>
+         		<p>&nbsp;</p>
+         		<p>晴天&nbsp;&nbsp;雨天</p>
+         		<p>我带着买房者走过这个城市的每个角落</p>
+         		<p>我不怕麻烦的客户</p>
+         		<p>因为我知道</p>
+         		<p>每一套房&nbsp;&nbsp;都是<span class="font-22">一个家</span></p>
+         	</div>
+         </div>
+         <div class="swiper-slide bg bg6">
+         	 <div class="page2 ani index-theme" swiper-animate-effect="lightSpeedIn" swiper-animate-delay="0.2s" swiper-animate-duration="0.4s">
+         		<p><span class="font-40">2001&nbsp;-&nbsp;2016</span></p>
+         		<p><i class="font-40">15</i><i class="font-22">&nbsp;年&nbsp;</i><i class="font-40">7</i><i class="font-22">&nbsp;城&nbsp;</i><i class="font-40">700</i><i class="font-22">&nbsp;店&nbsp;</i></p>
+         		<p>&nbsp;</p>
+         		<p>&nbsp;</p>
+         		<p>百万套租售成交</p>
+         		<p>我们夜以继日&nbsp;通宵达旦</p>
+         		<p>在这城市的每一处</p>
+         		<p>留下我们的<span class="font-22">脚印</span></p>
+         	</div>
+         </div>
+         <div class="swiper-slide bg bg7">
+         	 <div class="page2 ani index-theme" swiper-animate-effect="fadeInDown" swiper-animate-delay="0.2s" swiper-animate-duration="0.4s">
+         		<p><i class="font-22">我是<span class="font-40">新环境</span>的经纪人</i></p>
+         		<p>&nbsp;</p>
+         		<p>我见证过买房置业的艰难</p>
+         		<p>我见证过乔迁新居的喜悦</p>
+         		<p>更懂得这份托福的分量</p>
+         		<p>我用脚丈量过这个城市的每个角落</p>
+         		<p>我用心去满足客户的每个需求</p>
+         		<p>这是时间打磨的专业</p>
+         	</div>
+         </div>
+         <div class="swiper-slide bg bg8">
+         	<div class="logo">
+         		<img style="width:60%" src="images/tb-logo.png"/>
+         	</div>
+         	<div class="query">
+         		<input type="input" placeholder="请输入工号" name="workno" id="workno" value="">
+         		<input type="button" class="btn" name="key_query" id="key_query" value="提交"/>
+         	</div>
+         </div>
+         <div class="swiper-slide bg bg9">
+         	<div class="logo">
+         		<img style="width:60%" src="images/tb-logo.png"/>
+         	</div>
+         	<div class="logo zhaofang">
+         		<img style="width:60%" src="images/zhaofang.png"/>
+         	</div>
+         	<div class="qrcode">
+         		<div>
+	         		<div>
+	         			<img style="width:85%" src="images/app.png"/>
+	         		</div>
+	         		<div>
+	         			<img style="width:85%" src="images/gzh.png"/>
+	         		</div>
+         		</div>
+         		<div>
+	         		<div>
+	         			扫描二维码下载新环境APP
+	         		</div>
+	         		<div>
+	         			长按二维码&nbsp;关注公众号
+	         		</div>
+         		</div>
+         	</div>
+         </div>
+     </div>
+ </div>
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+<script src="http://cdn.bootcss.com/Swiper/3.0.7/js/swiper.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<script src="http://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript">
+	
+   	jQuery(function($){
+   	    
+	    new WOW().init();
+	    
+	    var jobSwiper = new Swiper("#key_page", {
+	        direction: "vertical",
+	        onInit: function(swiper){
+            	swiperAnimateCache(swiper); 
+            	swiperAnimate(swiper); 
+          	}, 
+          	onSlideChangeEnd: function(swiper){ 
+            	swiperAnimate(swiper); 
+          	},
+          	watchSlidesProgress: true,
+            onProgress: function(swiper){
+              for (var i = 0; i < swiper.slides.length; i++){
+                var slide = swiper.slides[i];
+                var progress = slide.progress;
+                var translate = progress*swiper.height/4;  
+      		  	scale = 1 - Math.min(Math.abs(progress * 0.5), 1);
+                var opacity = 1 - Math.min(Math.abs(progress/2),0.5);
+                slide.style.opacity = opacity;
+      		  	es = slide.style;
+      		  	es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,'+translate+'px,-'+translate+'px) scaleY(' + scale + ')';
+              }
+            },
+      	   	onSetTransition: function(swiper, speed) {
+              for (var i = 0; i < swiper.slides.length; i++){
+                es = swiper.slides[i].style;
+      		  	es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+              }
+            },
+	    });
+        
+        $("#key_music").click(function(){
+            $(this).toggleClass("off");
+            $(this).toggleClass("rotate-music");
+            if($(this).hasClass("off")){
+                document.getElementById("key_audio").pause();
+            }else{
+                document.getElementById("key_audio").play();
+            }
+        });
+	});
+</script>
+</body>
+</html>

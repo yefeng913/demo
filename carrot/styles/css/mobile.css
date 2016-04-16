@@ -1,0 +1,316 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    font-family: "微软雅黑", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 12px inherit;
+    color:#666;
+    margin: 0;
+    padding: 0;
+}
+.header{
+	width: 100%;
+    height: 10%;
+    z-index:2;
+    border-top:thin solid #dbdbdb;
+    border-bottom:thin solid #dbdbdb;
+    background-color:#FFF;
+    background-image: url("../images/mobile/logo.png");
+    background-repeat: no-repeat;
+    background-position: 10% center;
+    background-size:20%;
+}
+.header > div{
+	padding-right:10%; 
+    text-align:right;
+    height:25%;
+    color:rgb(1,39,102);
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.display-box{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-container-vertical > .swiper-pagination {
+    right: 0;
+    height:100%;
+}
+.swiper-container-vertical > .swiper-pagination .swiper-pagination-bullet {
+    margin: 0;
+    height:25%;
+    border-radius:0;
+    width:5px;
+}
+.swiper-pagination-bullet-active {
+    background:rgba(1,39,102,.7);
+}
+.bg-img{
+  	background-repeat: no-repeat;
+	background-size:cover; 
+	background-position:center;
+}
+.bg-img-contain{
+  	background-repeat: no-repeat;
+	background-size:contain; 
+	background-position: center top;
+}
+.index-title{
+	color:#FFF;
+	text-align:left;
+	visibility: hidden;
+	margin-top:-30%;
+}
+.advantage,.policy{
+  	width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.advantage > div{
+    height: 27.34%;
+    margin:2%;
+    color:#FFF;
+	text-align: center;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.advantage > div:first-child{
+	margin-top:4%;
+}
+.return {
+    background: #FFF;
+   	height:6%;
+    width: 100%;
+    color:rgb(1,39,102);
+    border-bottom: thin solid #dbdbdb; 
+    background-image: url("../images/mobile/back.png");
+    background-repeat: no-repeat;
+    background-position: 5% center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.return strong{
+	color:rgb(170,0,32);
+}
+.policy-big,.policy-other{
+	margin:2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.policy-big{
+	height:40%;
+	color:#FFF;
+	font-weigth:700;
+	margin-top:4%;
+}
+.policy-other{
+	height:42%;
+	display:block;
+	border:none;
+}
+.policy-other > div{
+	width:49%;
+	height:48%;
+	float:left;
+	color:#FFF;
+	font-weigth:700;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.policy-other > div:nth-child(2),.policy-other > div:last-child{
+	margin-left:2%;
+}
+.policy-other > div:nth-child(3),.policy-other > div:last-child{
+	margin-top:2%;
+} 
+.policy-detail{
+ 	background: #F3F3F3;
+    border-top: thin solid #dbdbdb;
+    display: none;
+    margin: 10px 0 0;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    text-align: left;
+}
+.choose-policy{
+	color:rgb(170,0,32);
+	font-weight:700;
+}
+.policy-show{
+	display:block;
+}
+.policy-detail > h3{
+	text-align:center;
+	border-bottom:thin solid #dbdbdb;
+	margin:0;
+	padding:10px 0;
+}
+.policy-detail > h4{
+	border-bottom:thin dashed #dbdbdb;
+	margin:0;
+	padding:5px;
+}
+.policy-detail > p{
+	margin:10px 15px;
+}
+.policy-detail ul,.policy-detail ol{
+	list-style: none;
+	padding:0;
+	margin:0;
+	margin-left:15px;
+}
+.policy-list{
+	list-style: none;
+	margin:0;
+	padding:0;
+	text-align:left;
+	color:#666;
+}
+.policy-list > li {
+ 	background-image: url("../images/mobile/more.png");
+    background-position: 95% center;
+    background-repeat: no-repeat;
+    background-size:3%;
+    border-bottom: thin solid #dbdbdb;
+    padding: 10px 0;
+}
+.policy-li-choose{
+	background-position: 95% 4%;
+	transform:rotateZ(180deg);
+}
+.policy-list > li > span {
+	padding-left:7%;
+}
+.about{
+	margin:2%;
+	text-align:left;
+}
+.logo{
+	margin-top:5%;
+	height:20%;
+	text-align:center;
+}
+.about-info{
+	color:#666;
+}
+/*超小屏*/
+@media (max-width: 320px) {
+	.index-title h2{
+		font-size:18px;
+	}
+	.header{
+	    background-size:30%;
+	}
+	.advantage > div,.policy-big,.policy-other{
+		font-size:14px;
+	}
+	.header > div,.return,.policy-list,.policy-detail{
+		font-size:10px;
+	}
+	.hidden-360{
+		display:none;
+	}
+}
+@media (min-width: 321px) and (max-width: 360px) {
+	.index-title h2{
+		font-size:20px;
+	}
+	.header{
+	    background-size:30%;
+	}
+	.header > div,.return,.policy-list,.policy-detail{
+		font-size:12px;
+	}
+	.hidden-360{
+		display:none;
+	}
+}
+@media (min-width: 361px) and (max-width: 767px) {
+	.index-title h2{
+		font-size:22px;
+	}
+	.header{
+	    background-size:35%;
+	}
+	.header > div,.return,.policy-list,.policy-detail{
+		font-size:15px;
+	}
+	.hidden-360{
+		display:none;
+	}
+}
+/*平板*/
+@media (min-width: 768px) {
+	.index-title h2{
+		font-size:32px;
+	}
+	.policy-detail ul > li,.policy-detail ol > li{
+		padding:5px 0;
+	}
+	.policy-list > li,.return{
+	    padding: 20px 0;
+	}
+}
